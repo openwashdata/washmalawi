@@ -1,0 +1,57 @@
+#' SDG Household Level Survey - Malawi (2018 - 2023)
+#' 
+#' This dataset comprises household-level survey data collected across Malawi between 2018 and 2023 as part of a Sustainable Development Goals (SDG) monitoring initiative. 
+#' The data captures detailed information on household water access, sanitation facilities, hygiene practices, and environmental conditions. 
+#' It includes geolocation data (latitude, longitude, altitude), survey timestamps, and various indicators such as the availability of handwashing facilities, type of toilet 
+#' used, and waste treatment methods. This dataset is instrumental for assessing progress in WASH (Water, Sanitation, and Hygiene) outcomes and guiding evidence-based 
+#' interventions in underserved communities.
+#' 
+#' @format A tibble with 6780 rows and 45 variables
+#' \describe{
+#'   \item{date_submitted}{The date and time when the survey was submitted.}
+#'   \item{survey_consent}{Indicates whether the respondent gave consent to proceed with the survey.}
+#'   \item{latitude}{Latitude where the respondent answered the location question.}
+#'   \item{longitude}{Longitude where the respondent answered the location question.}
+#'   \item{w1_latitude}{Latitude of the first water point.}
+#'   \item{w1_longitude}{Longitude of the first water point.}
+#'   \item{w1_method}{Method used to determine or locate the water point (e.g., GPS, interview).}
+#'   \item{w1_region}{Administrative region of the water point.}
+#'   \item{w1_loc_latitude}{Latitude of the reported/confirmed location of W1.}
+#'   \item{w1_loc_longitude}{Longitude of the reported/confirmed location of W1.}
+#'   \item{w2}{Type of water source used (e.g., borehole, spring, piped).}
+#'   \item{w2_other_specify}{Text entry if "Other" was selected for W2.}
+#'   \item{w3}{Primary use of the water (e.g., drinking, cooking).}
+#'   \item{w3_other_specify}{Text entry if "Other" was selected for W3.}
+#'   \item{w4}{Quality or state of the water (e.g., clear, muddy).}
+#'   \item{w5}{Estimated daily water quantity (could be volume, in liters).}
+#'   \item{w5_dont_know}{Indicates respondent did not know the value for W5.}
+#'   \item{w6}{Frequency or reliability of water availability.}
+#'   \item{w6_dont_know}{Indicates respondent did not know the value for W6.}
+#'   \item{w7}{Any restrictions or notes about using the water.}
+#'   \item{w8}{Seasonal availability or source reliability.}
+#'   \item{w9}{General remarks about water access or source condition.}
+#'   \item{w10_mpn}{Most Probable Number (bacterial test) result recorded.}
+#'   \item{w10_confidence}{Confidence level associated with W10 test.}
+#'   \item{w10_health_risk}{Whether water poses a health risk according to W10 result.}
+#'   \item{w10_image}{Image taken of water test result.}
+#'   \item{w10_c1}{Flags for contamination indicators (e.g., chemical/biological markers).}
+#'   \item{w11_magnitude}{Magnitude of contamination or test result (numeric).}
+#'   \item{w11_units}{Units of measure used for W11 (e.g., CFU/100mL).}
+#'   \item{w12}{Remarks related to W11.}
+#'   \item{w13_magnitude}{Additional or secondary test magnitude.}
+#'   \item{w13_units}{Units for W13.}
+#'   \item{w14}{General environmental conditions.}
+#'   \item{w15}{Additional context or concerns raised by respondents.}
+#'   \item{w16}{Miscellaneous notes or metadata from enumerator.}
+#'   \item{toilet_type}{Type of toilet facility household members usually use.}
+#'   \item{toilet_shared}{Indicates if the toilet is shared with other households.}
+#'   \item{waste_removed}{Whether human waste from this facility is removed periodically.}
+#'   \item{waste_treated}{Indicates if the removed waste is treated (e.g., in a septic tank).}
+#'   \item{waste_disposal}{Method used to dispose of or treat human waste.}
+#'   \item{handwash_place}{Whether a handwashing facility is present and its location.}
+#'   \item{handwash_not_observed_reason}{Reason for not observing the handwashing place, if �Other� was selected.}
+#'   \item{handwash_water}{Indicates whether water was observed at the handwashing facility.}
+#'   \item{handwash_soap}{Indicates whether soap or detergent was observed.}
+#'   \item{handwash_water_soap}{Whether the household currently has both water and soap/detergent for handwashing.}
+#' }
+"sdghhsurveymw"
