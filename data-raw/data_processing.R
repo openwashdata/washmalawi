@@ -67,7 +67,9 @@ check_utf8(data_in)
 
 # Convert 'date_submitted' column to Date type (assuming it's in m/d/y format)
 data_in <- data_in %>%
-  mutate(date_submitted = mdy(date_submitted))
+  mutate(date_submitted = mdy_hm(date_submitted),
+         date_submitted = as.Date(date_submitted))
+
 
 # Reformat the date to d/m/y format (character format)
 data_in <- data_in %>%
@@ -87,7 +89,7 @@ openxlsx::write.xlsx(sdghhsurveymw,
 
 # Display a chart for the boreholes drilled per year ---------------------------
 # Convert 'date_of_drilling' to Date format and extract the year
-sdghhsurveymw$year <- year(mdy(sdghhsurveymw$date_submitted))
+# sdghhsurveymw$year <- year(mdy(sdghhsurveymw$date_submitted))
 
 # Count number of boreholes drilled per year
 #boreholes_per_year <- drillingdata %>%
