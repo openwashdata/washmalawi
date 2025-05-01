@@ -11,6 +11,7 @@ library(dplyr)
 library(readxl)
 library(openxlsx)
 library(lubridate)
+library(ggplot2)
 
 # Load Data --------------------------------------------------------------------
 # Load the necessary data from a CSV file
@@ -87,24 +88,23 @@ openxlsx::write.xlsx(sdghhsurveymw,
                      here::here("inst", "extdata", paste0("sdghhsurveymw",
                                                           ".xlsx")))
 
-# Display a chart for the boreholes drilled per year ---------------------------
-# Convert 'date_of_drilling' to Date format and extract the year
-# sdghhsurveymw$year <- year(mdy(sdghhsurveymw$date_submitted))
+# Display a chart for the number of households against type of toilet in use
 
-# Count number of boreholes drilled per year
-#boreholes_per_year <- drillingdata %>%
-#  filter(!is.na(year)) %>%
-#  group_by(year) %>%
-#  summarise(boreholes_drilled = n())
+# Filter out records with missing or empty 'toilet_type'
+# Then count the number of occurrences for each toilet type
+toilet_data <- sdghhsurveymw %>%
+  filter(!is.na(toilet_type) & toilet_type != "") %>%
+  count(toilet_type, sort = TRUE)
 
-# Create the bar plot
-#ggplot(boreholes_per_year, aes(x = factor(year), y = boreholes_drilled)) +
-#  geom_col(fill = "red") +
-#  theme_minimal() +
-#  labs(
-#    title = "Boreholes Drilled Per Year",
-#    x = "Year",
-#    y = "Number of Boreholes Drilled"
-#  )
-
-
+# Plotting the data ------------------------------------------------------------
+# Create a horizontal bar chart showing the number of households
+# using each type of toilet
+ggplot(toilet_data, aes(x = reorder(toilet_type, n), y = n)) +
+  geom_bar(stat = "identity", fill = "#2C7BB6") +  # Use blue bars for counts
+  coord_flip() +  # Flip axes to make the chart horizontal
+  labs(
+    title = "Distribution of Toilet Types in Surveyed Households",  # Chart title
+    x = "Toilet Type",  # X-axis label (after flip, shows toilet types)
+    y = "Number of Households"  # Y-axis label (number of entries)
+  ) +
+  theme_minimal(base_size = 13)
