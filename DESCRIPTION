@@ -1,5 +1,5 @@
-Package: sdghhsurveymw
-Title: What the Package Does (One Line, Title Case)
+Package: washmalawi
+Title: WASH Household Level Survey Data 2018 - 2023
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -43,7 +43,7 @@ Authors@R: c(
     person("Bright", "Mphero", role = "aut"),
     person("Rodney", "Kananji", role = "aut")
   )
-Description: What the package does (one paragraph).
+Description: This package provides access to WASH Sustainable Development Goals for Household-Level for Malawi between 2018 and 2023.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

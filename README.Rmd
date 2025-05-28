@@ -32,7 +32,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 This dataset contains results from the Sustainable Development Goals
-(SDG) Household-Level Survey conducted by BASEFlow Malawi between 2018
+(SDG) Household-Level Survey for WASH conducted by BASEFlow Malawi between 2018
 and 2023, using the mWater platform. The data provides detailed,
 household-level insights into access to water, sanitation, hygiene, and
 environmental conditions across different communities in Malawi.
@@ -80,12 +80,12 @@ This dataset is suitable for a range of applications, including:
 
 ## Installation
 
-You can install the development version of sdghhsurveymw from
+You can install the development version of washmalawi from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("openwashdata/sdghhsurveymw")
+devtools::install_github("openwashdata/washmalawi")
 ```
 
 ```{r}
@@ -109,7 +109,7 @@ file from the table below.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-extdata_path <- "https://github.com/openwashdata/sdghhsurveymw/raw/main/inst/extdata/"
+extdata_path <- "https://github.com/openwashdata/washmalawi/raw/main/inst/extdata/"
 
 read_csv("data-raw/dictionary.csv") |> 
   distinct(file_name) |> 
@@ -128,17 +128,17 @@ read_csv("data-raw/dictionary.csv") |>
 The package provides access to Sustainable Development Goals (SDG) Household-Level Survey data for Malawi between 2018 and 2023
 
 ```{r}
-library(sdghhsurveymw)
+library(washmalawi)
 ```
 
-### sdghhsurveymw
+### washmalawi
 
-The dataset `sdghhsurveymw` contains
-`r nrow(sdghhsurveymw)` observations and `r ncol(sdghhsurveymw)`
+The dataset `washmalawi` contains
+`r nrow(washmalawi)` observations and `r ncol(washmalawi)`
 variables
 
 ```{r}
-sdghhsurveymw |> 
+washmalawi |> 
   head(3) |> 
   gt::gt() |>
   gt::as_raw_html()
@@ -148,7 +148,7 @@ For an overview of the variable names, see the following table.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>
-  dplyr::filter(file_name == "sdghhsurveymw.rda") |>
+  dplyr::filter(file_name == "washmalawi.rda") |>
   dplyr::select(variable_name:description) |> 
   knitr::kable() |> 
   kableExtra::kable_styling("striped") |> 
@@ -159,12 +159,12 @@ readr::read_csv("data-raw/dictionary.csv") |>
 
 ```{r}
 # Plot a bar chart for the toilets in use
-library(sdghhsurveymw)
+library(washmalawi)
 library(dplyr)
 library(ggplot2)
 # Filter out records with missing or empty 'toilet_type'
 # Then count the number of occurrences for each toilet type
-toilet_data <- sdghhsurveymw %>%
+toilet_data <- washmalawi %>%
   filter(!is.na(toilet_type) & toilet_type != "") %>%
   count(toilet_type, sort = TRUE)
 
@@ -191,5 +191,5 @@ Data are available as
 Please cite this package using:
 
 ```{r}
-citation("sdghhsurveymw")
+citation("washmalawi")
 ```

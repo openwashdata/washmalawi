@@ -1,46 +1,27 @@
 directory,file_name,variable_name,variable_type,description
-data/,sdghhsurveymw.rda,date_submitted,character,The date and time when the survey was submitted.
-data/,sdghhsurveymw.rda,survey_consent,character,Indicates whether the respondent gave consent to proceed with the survey.
-data/,sdghhsurveymw.rda,latitude,numeric,Latitude where the respondent answered the location question.
-data/,sdghhsurveymw.rda,longitude,numeric,Longitude where the respondent answered the location question.
-data/,sdghhsurveymw.rda,w1_latitude,numeric,Latitude of the first water point.
-data/,sdghhsurveymw.rda,w1_longitude,numeric,Longitude of the first water point.
-data/,sdghhsurveymw.rda,w1_method,character,"Method used to determine or locate the water point (e.g., GPS, interview)."
-data/,sdghhsurveymw.rda,w1_region,character,Administrative region of the water point.
-data/,sdghhsurveymw.rda,w1_loc_latitude,numeric,Latitude of the reported/confirmed location of W1.
-data/,sdghhsurveymw.rda,w1_loc_longitude,numeric,Longitude of the reported/confirmed location of W1.
-data/,sdghhsurveymw.rda,w2,character,"Type of water source used (e.g., borehole, spring, piped)."
-data/,sdghhsurveymw.rda,w2_other_specify,logical,Text entry if Other was selected for W2.
-data/,sdghhsurveymw.rda,w3,logical,"Primary use of the water (e.g., drinking, cooking)."
-data/,sdghhsurveymw.rda,w3_other_specify,logical,Text entry if Other was selected for W3.
-data/,sdghhsurveymw.rda,w4,character,"Quality or state of the water (e.g., clear, muddy)."
-data/,sdghhsurveymw.rda,w5,numeric,"Estimated daily water quantity (could be volume, in liters)."
-data/,sdghhsurveymw.rda,w5_dont_know,logical,Indicates respondent did not know the value for W5.
-data/,sdghhsurveymw.rda,w6,character,Frequency or reliability of water availability.
-data/,sdghhsurveymw.rda,w6_dont_know,logical,Indicates respondent did not know the value for W6.
-data/,sdghhsurveymw.rda,w7,character,Any restrictions or notes about using the water.
-data/,sdghhsurveymw.rda,w8,character,Seasonal availability or source reliability.
-data/,sdghhsurveymw.rda,w9,character,General remarks about water access or source condition.
-data/,sdghhsurveymw.rda,w10_mpn,logical,Most Probable Number (bacterial test) result recorded.
-data/,sdghhsurveymw.rda,w10_confidence,logical,Confidence level associated with W10 test.
-data/,sdghhsurveymw.rda,w10_health_risk,logical,Whether water poses a health risk according to W10 result.
-data/,sdghhsurveymw.rda,w10_image,logical,Image taken of water test result.
-data/,sdghhsurveymw.rda,w10_c1,logical,"Flags for contamination indicators (e.g., chemical/biological markers)."
-data/,sdghhsurveymw.rda,w11_magnitude,logical,Magnitude of contamination or test result (numeric).
-data/,sdghhsurveymw.rda,w11_units,logical,"Units of measure used for W11 (e.g., CFU/100mL)."
-data/,sdghhsurveymw.rda,w12,character,Remarks related to W11.
-data/,sdghhsurveymw.rda,w13_magnitude,logical,Additional or secondary test magnitude.
-data/,sdghhsurveymw.rda,w13_units,logical,Units for W13.
-data/,sdghhsurveymw.rda,w14,character,General environmental conditions.
-data/,sdghhsurveymw.rda,w15,character,Additional context or concerns raised by respondents.
-data/,sdghhsurveymw.rda,w16,character,Miscellaneous notes or metadata from enumerator.
-data/,sdghhsurveymw.rda,toilet_type,character,Type of toilet facility household members usually use.
-data/,sdghhsurveymw.rda,toilet_shared,character,Indicates if the toilet is shared with other households.
-data/,sdghhsurveymw.rda,waste_removed,character,Whether human waste from this facility is removed periodically.
-data/,sdghhsurveymw.rda,waste_treated,character,"Indicates if the removed waste is treated (e.g., in a septic tank)."
-data/,sdghhsurveymw.rda,waste_disposal,character,Method used to dispose of or treat human waste.
-data/,sdghhsurveymw.rda,handwash_place,character,Whether a handwashing facility is present and its location.
-data/,sdghhsurveymw.rda,handwash_not_observed_reason,character,"Reason for not observing the handwashing place, if Other was selected."
-data/,sdghhsurveymw.rda,handwash_water,character,Indicates whether water was observed at the handwashing facility.
-data/,sdghhsurveymw.rda,handwash_soap,character,Indicates whether soap or detergent was observed.
-data/,sdghhsurveymw.rda,handwash_water_soap,character,Whether the household currently has both water and soap/detergent for handwashing.
+data/,washmalawi.rda,date_submitted,character,The date on which the household survey form was submitted.
+data/,washmalawi.rda,latitude,numeric,The geographic latitude coordinate of the household location.
+data/,washmalawi.rda,longitude,numeric,The geographic longitude coordinate of the household location.
+data/,washmalawi.rda,water_point_identification_method,character,"Method used to identify the water point (e.g., GPS, verbal reference, physical visit)."
+data/,washmalawi.rda,traditional_authority,character,The name of the Traditional Authority (TA) where the household is located.
+data/,washmalawi.rda,district,character,The name of the district where the household is located.
+data/,washmalawi.rda,water_source_type,character,"Type of water source used by the household (e.g., borehole, protected spring, piped water)."
+data/,washmalawi.rda,water_source_location,character,"Location of the water source relative to the household (e.g., within compound, outside)."
+data/,washmalawi.rda,water_collection_time_mins,numeric,"Estimated round-trip time in minutes to collect water, including waiting time."
+data/,washmalawi.rda,time_not_known,logical,TRUE if respondent does not know or cannot estimate the water collection time.
+data/,washmalawi.rda,water_insufficiency_30days,character,"Whether the household experienced water insufficiency in the past 30 days (e.g., yes/no/unknown)."
+data/,washmalawi.rda,water_quality_tested,character,Whether the water quality at the source has been tested.
+data/,washmalawi.rda,bacteriological_test_done_at_location,character,Indicates whether a bacteriological test was performed on-site at the household or source.
+data/,washmalawi.rda,parameters_tested_methods,character,List or description of water quality parameters tested and methods used.
+data/,washmalawi.rda,chemical_quality_tested,character,"Indicates whether chemical tests (e.g., for metals) were performed on the water."
+data/,washmalawi.rda,arsenic_tested_water,character,Indicates whether the water was tested for arsenic contamination.
+data/,washmalawi.rda,fluoride_tested_water,character,Indicates whether the water was tested for fluoride levels.
+data/,washmalawi.rda,toilet_facility_type,character,"The type of toilet facility used by the household (e.g., flush, pit latrine, open defecation)."
+data/,washmalawi.rda,toilet_facility_shared,character,Indicates whether the toilet facility is shared with other households.
+data/,washmalawi.rda,waste_removed,character,"Indicates whether household waste is regularly removed (e.g., by truck or by household)."
+data/,washmalawi.rda,waste_treated,character,"Whether the waste is treated (e.g., composted, incinerated, not treated)."
+data/,washmalawi.rda,waste_disposal,character,"Method used for waste disposal (e.g., open dump, burning, compost)."
+data/,washmalawi.rda,handwash_available,character,Whether the household has a designated place for handwashing.
+data/,washmalawi.rda,handwashing_water_presence,character,Whether water was present at the handwashing location at the time of visit.
+data/,washmalawi.rda,handwashing_soap_presence,character,Whether soap or detergent was present at the handwashing place at the time of visit.
+data/,washmalawi.rda,handwashing_supplies_available,character,Overall availability of both soap and water for handwashing.

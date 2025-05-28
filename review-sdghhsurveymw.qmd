@@ -1,0 +1,77 @@
+---
+title: "sdghhsurveywm: Package review"
+author: "Colin Walder"
+format: html
+---
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(DataExplorer)
+package_data <- read_csv("sdghhsurveymw.csv")
+```
+
+# General Information and Metadata
+
+-   Package Name: Too long of an acronym and it seems to be more about WASH than SDGs. What about washmalawi? Please suggest a few names. **RESOLVED**
+-   The Title and Description fields are missing in DESCRIPTION. **RESOLVED**
+
+# Data Content & Quality
+
+```{r, eval=FALSE}
+# create_report is the main function from the DataExplorer package (see https://boxuancui.github.io/DataExplorer/)
+# run it to get a quick overview of your data
+create_report(package_data)
+```
+
+-   What is the reason behind including non-consenting respondents? **RESOLVED**
+
+```{r}
+package_data |> 
+  count(survey_consent) |> 
+  ggplot(aes(x = survey_consent, y = n, label = n)) +
+  geom_col() +
+  geom_label()
+```
+
+-   The variables `link_community_site` and `link_community_na` are not documented in the dictionary. **RESOLVED**
+-   `w1_method`: Only "GPS" in the dataset but you also mention interviews in the variable description. **RESOLVED**
+
+```{r}
+count(package_data, w1_method)
+```
+
+-   `w1_region`: I'd delete Malawi as all observations are from Malawi. In addition, split up traditional authority and district into two variables for easier data analysis later. **RESOLVED**
+
+-   Explain in more detail how `w1_latitude` is different from `w1_latitude_loc` in the dictionary. **RESOLVED**
+
+-   Remove the numbers/abbreviations and spell out the meaning of all variables, e.g., `water_point_latitude` rather than `w1_latitude`. **RESOLVED**
+
+-   For the variables below, all values are NA. Either add values to these columns or delete the columns as they don't add any information for now.
+
+```{r}
+find_all_na_columns <- function(df) {
+  names(df)[colSums(is.na(df)) == nrow(df)]
+}
+
+find_all_na_columns(package_data)
+```
+
+-   `w5` seems to be heavily skewed. Is this actually the case or might there be some data entry errors? **RESOLVED**
+
+```{r}
+hist(package_data$w5)
+
+quantile(package_data$w5, probs = seq(0,1,0.1), na.rm = TRUE)
+```
+
+# Data Processing
+
+-   Why are there some many rows with NAs in latitude? **RESOLVED**
+-   Remove `check_utf8()`. This is not part of the data processing, also considering that there are no non-UTF-8 characters found in the dataset when running the function. **RESOLVED**
+-   As a result, also delete the conversion from Latin1 to UTF-8 (lines 57-67). **RESOLVED**
+-   Delete lines starting from line 91 to the end as data visualization is not part of the data processing. **RESOLVED**
+
+# Documentation
+
+-   The title is cut off in the visualization.
+-   Add a second visualization with a map to show the users that the data is geo-referenced.

@@ -77,29 +77,29 @@ data_in <- data_in %>%
   mutate(date_submitted = format(date_submitted, "%d/%m/%Y"))
 
 # Assign data to a variable
-sdghhsurveymw <- data_in
+washmalawi <- data_in
 
 # Export Data ------------------------------------------------------------------
-usethis::use_data(sdghhsurveymw, overwrite = TRUE)
+usethis::use_data(washmalawi, overwrite = TRUE)
 fs::dir_create(here::here("inst", "extdata"))
-readr::write_csv(sdghhsurveymw,
-                 here::here("inst", "extdata", paste0("sdghhsurveymw", ".csv")))
-openxlsx::write.xlsx(sdghhsurveymw,
-                     here::here("inst", "extdata", paste0("sdghhsurveymw",
+readr::write_csv(washmalawi,
+                 here::here("inst", "extdata", paste0("washmalawi", ".csv")))
+openxlsx::write.xlsx(washmalawi,
+                     here::here("inst", "extdata", paste0("washmalawi",
                                                           ".xlsx")))
 
 # Display a chart for the number of households against type of toilet in use
 
-# Filter out records with missing or empty 'toilet_type'
+# Filter out records with missing or empty 'toilet_facility_type'
 # Then count the number of occurrences for each toilet type
-toilet_data <- sdghhsurveymw %>%
-  filter(!is.na(toilet_type) & toilet_type != "") %>%
-  count(toilet_type, sort = TRUE)
+toilet_data <- washmalawi %>%
+  filter(!is.na(toilet_facility_type) & toilet_facility_type != "NA") %>%
+  count(toilet_facility_type, sort = TRUE)
 
 # Plotting the data ------------------------------------------------------------
 # Create a horizontal bar chart showing the number of households
 # using each type of toilet
-ggplot(toilet_data, aes(x = reorder(toilet_type, n), y = n)) +
+ggplot(toilet_data, aes(x = reorder(toilet_facility_type, n), y = n)) +
   geom_bar(stat = "identity", fill = "#2C7BB6") +  # Use blue bars for counts
   coord_flip() +  # Flip axes to make the chart horizontal
   labs(
