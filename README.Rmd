@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# SDG Household Level Survey (Malawi CJF) (2018 - 2023)
+# WASH household Survey (2018 - 2023)
 
 <!-- badges: start -->
 
