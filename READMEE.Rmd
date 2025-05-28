@@ -165,12 +165,12 @@ library(ggplot2)
 # Filter out records with missing or empty 'toilet_type'
 # Then count the number of occurrences for each toilet type
 toilet_data <- washmalawi %>%
-  filter(!is.na(toilet_facility_type) & toilet_facility_type != "NA") %>%
-  count(toilet_facility_type, sort = TRUE)
+  filter(!is.na(toilet_type) & toilet_type != "") %>%
+  count(toilet_type, sort = TRUE)
 
 # Create a horizontal bar chart showing the number of households
 # using each type of toilet
-ggplot(toilet_data, aes(x = reorder(toilet_facility_type, n), y = n)) +
+ggplot(toilet_data, aes(x = reorder(toilet_type, n), y = n)) +
   geom_bar(stat = "identity", fill = "#2C7BB6") +  # Use blue bars for counts
   coord_flip() +  # Flip axes to make the chart horizontal
   labs(
