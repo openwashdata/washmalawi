@@ -1,8 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this data, please cite it as below."
 title: "washmalawi: WASH Household Level Survey Data 2018 - 2023"
-version: 0.0.0.9000
-date-released: 2025-04-30
+version: 1.0.1
+date-released: 2025-07-03
+doi: 10.5281/zenodo.15799918
 authors:
   - family-names: "Mhango"
     given-names: "Emmanuel"

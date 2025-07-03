@@ -45,12 +45,13 @@ bibentry(
     person("Rodney", "Kananji")
   ),
   year     = 2025,
-  note     = "R package version 0.0.0.9000",
+  note     = "R package version 1.0.1",
+  doi      = "10.5281/zenodo.15799918",
   url      = "https://github.com/openwashdata/washmalawi",
   textVersion = paste(
     "Mhango, E., Robertson, D., Mandala, C., et al. (2025).",
     "washmalawi: WASH Household Level Survey Data 2018 - 2023.",
-    "R package version 0.0.0.9000.",
-    "https://github.com/openwashdata/washmalawi"
+    "R package version 1.0.1.",
+    "https://doi.org/10.5281/zenodo.15799918"
   )
 )
