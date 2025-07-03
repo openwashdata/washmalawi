@@ -1,3 +1,8 @@
+# washmalawi 1.0.1
+
+* Minor release to enable Zenodo DOI generation
+* No functional changes from v1.0.0
+
 # washmalawi 1.0.0
 
 ## Major improvements
