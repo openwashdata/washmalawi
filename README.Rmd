@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# WASH household Survey (2018 - 2023)
+# washmalawi: WASH Household Level Survey Data 2018 - 2023
 
 <!-- badges: start -->
 
@@ -209,7 +209,7 @@ ggplot() +
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/washmalawi/blob/main/LICENSE.md).
 
 ## Citation
 
