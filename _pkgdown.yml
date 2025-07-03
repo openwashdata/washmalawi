@@ -1,0 +1,22 @@
+url: https://openwashdata.github.io/washmalawi/
+
+template:
+  bootstrap: 5
+  includes:
+    in_header: |
+      <script defer data-domain="openwashdata.github.io" src="https://plausible.io/js/script.js"></script>
+
+home:
+  title: "washmalawi: WASH Household Level Survey Data 2018 - 2023"
+  description: "Access to Water, Sanitation, and Hygiene (WASH) household-level survey data collected in Malawi between 2018 and 2023."
+
+navbar:
+  structure:
+    left: [intro, reference, articles, tutorials, news]
+    right: [search, github]
+
+reference:
+- title: "Data"
+  desc: "Access the washmalawi dataset"
+  contents:
+  - washmalawi

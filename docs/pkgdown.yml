@@ -1,0 +1,8 @@
+pandoc: '3.5'
+pkgdown: 2.1.3
+pkgdown_sha: ~
+articles: {}
+last_built: 2025-07-03T12:43Z
+urls:
+  reference: https://openwashdata.github.io/washmalawi/reference
+  article: https://openwashdata.github.io/washmalawi/articles
