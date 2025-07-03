@@ -1,5 +1,12 @@
-^sdghhsurveymw\.Rproj$
+^washmalawi\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
 ^LICENSE\.md$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
+^CLAUDE\.md$
+^CITATION\.cff$
+^review-sdghhsurveymw\.qmd$
