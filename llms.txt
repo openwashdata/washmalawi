@@ -1,5 +1,7 @@
 # washmalawi: WASH Household Level Survey Data 2018 - 2023
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 This dataset contains results from the Sustainable Development Goals
 (SDG) Household-Level Survey for WASH conducted by BASEFlow Malawi
 between 2018 and 2023, using the mWater platform. The data provides
