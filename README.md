@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# washmalawi: WASH Household Level Survey Data 2018 - 2023
+# washmalawi: WASH Household Level Survey Data 2018 - 2023 <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -10,8 +10,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15799918.svg)](https://doi.org/10.5281/zenodo.15799918)
 
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 This dataset contains results from the Sustainable Development Goals
 (SDG) Household-Level Survey for WASH conducted by BASEFlow Malawi
@@ -834,6 +832,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/washmalawi/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
